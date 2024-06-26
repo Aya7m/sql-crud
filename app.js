@@ -7,6 +7,10 @@ const port =process.env.port || 3000
 
 app.use(cors())
 connection
+
+app.get('/',(req,res)=>{
+    res.status(200).json({message:'hello on my project'})
+})
 app.use(express.json())
 app.use('/posts',postRouter)
 
